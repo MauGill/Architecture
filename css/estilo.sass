@@ -1,0 +1,123 @@
+
+body
+    margin: 0
+    padding: 0
+    font-family: 'Rajdhani', sans-serif
+    .header
+        background: url(../img/Header.jpg)
+        background-size: cover
+        height: 100vh
+        background-attachment: fixed
+        background-position: top
+        display: flex
+        justify-content: center
+        background-position-y: -6px
+        .nav-var
+            display: flex
+            width: 90%
+            height: 15vh
+            justify-content: space-between
+            align-items: center
+            position: fixed
+            margin: 40px 20px 20px 20px
+            .logo
+                width: 90px
+                margin: 10px
+                height: 90%
+                color: #000
+                padding-top: 20px
+                a
+                    cursor: pointer
+                    color: #000
+                    text-decoration: none
+                    font-weight: 500
+                    font-size:  25px
+                    margin-top: 20px
+            .nav-list
+                list-style: none
+                display: flex
+                font-weight: 400
+                li
+                    letter-spacing: 3px
+                    margin-left: 32px
+                    font-size: x-large
+                a
+                    color: #000
+                    text-decoration: none   
+                li::after
+                    content: ''
+                    display: block
+                    width: 0
+                    height: 2px
+                    background: #000
+                    transition: width .3s
+                li:hover::after
+                    width: 100%
+                    transition: width .3s            
+body
+    .header
+        .nav-var
+            .mobile-menu
+                display: none
+                cursor: pointer
+                div
+                    width: 25px
+                    height: 3px
+                    color: #fff
+                    margin: 5px
+                    background: #fff
+                    transition: all 0.3s ease                    
+
+@media screen and ( max-width: 700px)
+    body
+        .header
+            .nav-var
+                .nav-list
+                    position: inherit
+                    top: -20px
+                    right: 0
+                    width: 60%
+                    height: 100vh
+                    background-color: #fff
+                    flex-direction: column
+                    justify-content: space-around
+                    padding: 0px 9px 0px 0px
+                    transform: translateX(300%)
+                    transition: transform 0.3s ease-in-out
+                    li
+                        margin-left: 20px
+                        opacity: 0
+                        transition: 0.5s ease-in-out    
+                        a
+                            font-size: 15px
+
+                .nav-list.active
+                    transform: translateX(0vh)
+                    transition: 0.5s ease-in-out    
+                    
+                .mobile-menu
+                    display: block
+                .logo
+                    padding-top: inherit
+                    z-index: 1
+@keyframes navLinkFade 
+    from
+        opacity: 0
+        transform: translateX(50px)
+    to
+        opacity: 1
+        transform: translateX(0)
+.toggle .line1
+    transform: rotate(-45deg) translate(-5px,6px)        
+.toggle .line2
+    opacity: 0        
+.toggle .line3
+    transform: rotate(45deg) translate(-5px,-6px)                
+                    
+
+        
+         
+
+
+
+                    
