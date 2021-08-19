@@ -37,9 +37,11 @@ body
                 list-style: none
                 display: flex
                 font-weight: 400
+                margin-left: 10vh
                 li
                     font-size: x-large
                     box-shadow: 0 1px 0 0 #0000001e
+                    margin-left: 10vh
                 a
                     color: #000
                     text-decoration: none   
@@ -57,10 +59,12 @@ body
     .header
         .nav-var
             .mob-header
+                display: flex
                 .social-widgets
                     display: flex
                     justify-content: end
                     padding: 21px 45px 0px 30px
+                    visibility: hidden
                     i
                         font-size: large
                         width: 35px
@@ -91,22 +95,27 @@ body
                     height: 80vh
                     transform: translateX(300%)    
                     transition: all 0.8s ease
+                    flex-direction: column
                     .nav-list
                         flex-direction: column
                         transform: translateX(300%)
                         transition: transform 0.3s ease-in-out
                         padding: 45px 30px 30px 30px
+                        margin-left: 0px
                         li
                             opacity: 0
                             transition: 0.5s ease-in-out  
                             height: 50px  
                             display: flex
                             align-items: center
+                            margin-left: 0px
                             a
                                 font-size: 27px
                     .nav-list.active
                         transform: translateX(0vh)
                         transition: 0.5s ease-in-out    
+                    .social-widgets
+                        visibility: inherit    
                 .mobile-menu
                     display: block
                     position: fixed
