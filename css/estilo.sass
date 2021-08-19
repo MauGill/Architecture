@@ -1,855 +1,138 @@
-*
-    padding: 0
-    margin: 0
+
 body
-    background: #000
-    .banner-principal
-        display: inline-flex
-        justify-content: space-between
+    margin: 0
+    padding: 0
+    font-family: 'Rajdhani', sans-serif
+    .header
+        background: url(../img/Header.jpg)
+        background-size: cover
         height: 100vh
-        align-items: center
-        transition: 0.5s ease-in-out
-        .img
-            width: 50%
-            height: 100vh
-            object-fit: cover
+        background-attachment: fixed
+        background-position: top
+        display: flex
+        justify-content: center
+        background-position-y: -6px
+        .nav-var
             display: flex
-            justify-content: center
+            width: 90%
+            height: 15vh
+            justify-content: space-between
             align-items: center
-            img
-                width: 100%
-                height: 100%
-                object-fit: cover
-                transition: 0.9s ease-in-out
-        .contenido
-            width: 50%
-            background-color: #fff
-            padding: 4em
-            overflow: hidden
-            transition: 0.5s ease-in-out    
-            align-items: center
-            h1
+            position: fixed
+            margin: 40px 20px 20px 20px
+            .logo
+                width: 90px
+                margin: 10px
+                height: 90%
                 color: #000
-                font-weight: 300
-                vertical-align: inherit
-                font-size: 50px
-                padding-bottom: 10px
-            .major
-                font-size: 20px
-                font-weight: 200
-                padding-bottom: 15px
+                padding-top: 20px
+                a
+                    cursor: pointer
+                    color: #000
+                    text-decoration: none
+                    font-weight: 500
+                    font-size:  25px
+                    margin-top: 20px        
+            .nav-list
+                list-style: none
+                display: flex
+                font-weight: 400
+                li
+                    font-size: x-large
+                    box-shadow: 0 1px 0 0 #0000001e
                 a
                     color: #000
-                    &:hover
-                        color: #18c9c9
-                        text-decoration: none
-            .parrafo2
-                font-size: 16px
-                font-weight: 200
-                margin-bottom: 40px
-                .propiedades
-                    cursor: pointer
-                    a
-                        color: #000
-                        &:hover
-                            text-decoration: none
-                            color: #18c9c9
-                            transition: 0.3s
-            .comenzar
-                display: flex
-                justify-content: left
-                padding: 0
-                cursor: pointer
-                li
+                    text-decoration: none   
+                li::after
+                    content: ''
+                    display: block
+                    width: 0
+                    height: 2px
+                    background: #000
+                    transition: width .3s
+                li:hover::after
+                    width: 100%
+                    transition: width .3s            
+body
+    .header
+        .nav-var
+            .mob-header
+                .social-widgets
                     display: flex
-                    overflow: auto
-                    justify-content: center
-                    a
-                        width: auto
-                        text-decoration: none
-                        height: auto
-                        color: #000    
-                        border-radius: 4em
-                        text-align: center
-                        padding: 0 3em
-                        text-transform: uppercase
-                        box-shadow: inset 0 0 0 0.5px #a3a3a3
-                        line-height: 4em
-                        font-size: 0.8rem
-                        font-weight: 400
-                        text-overflow: ellipsis
-                        letter-spacing: 0.125em
-                        &:hover
-                            color: #18c9c9
-                            box-shadow: inset 0 0 0 0.5px #18c9c9
-//                              ESTILOS
-body
-    .banner-principal.estilo1
-        justify-content: center
-        .contenido.estilo1
-            position: relative
-            opacity: 0.8
-            z-index: 1
-            border-radius: 10px
-            text-align: center
-            .comenzar.estilo1
-                justify-content: center
-        .img.estilo1
-            position: absolute
-            width: 100%    
-            transition: 0.9s ease-in-out
-body
-    .banner-principal.estilo2
-        padding:  7rem 7rem 5rem 7rem
-        flex-direction: row-reverse
-        .contenido.estilo2
-            width: 60%
-        .img.estilo2
-            width: 21rem
-            height: 21rem
-            margin: 20px
-            img
-                border-radius: 100%     
-body
-    .banner-principal.estilo3
-        justify-content: center    
-//                               ESTILOS                            
-//                              COLORES
-body
-    .banner-principal.color1
-        background-color: #30363d
-        transition: 0.5s ease-in-out
-        .contenido.color1
-            background-color: #30363d
-            transition: 0.5s ease-in-out 
-    .banner-principal.color2
-            background-color: #db8992   
-            .contenido.color2
-                background-color: #db8992   
-    .banner-principal.color3    
-            background-color: #ab7aad
-            .contenido.color3    
-                background-color: #ab7aad
-    .banner-principal.color4    
-            background-color: #897cad
-            .contenido.color4    
-                background-color: #897cad   
-    .banner-principal.color5    
-            background-color: #7794ce
-            .contenido.color5    
-                background-color: #7794ce
-    .banner-principal.color6
-            background-color: #64abb4  
-            .contenido.color6
-                background-color: #64abb4         
-//                              ESQUEMA
-body
-    .banner-principal.esquema
-        background-color: #000
-        .contenido.esquema
-            background-color: #000
-            h1.esquema
-                color: #fff
-            .major.esquema
-                color: #fff
-                a.esquema
-                    color: #fff
-            .parrafo2.esquema
-                color: #fff
-                .controles.esquema
-                    background-color: #fff
-                    color: #000     
-            .comenzar
-                li
-                    a.esquema
-                        color: #fff                     
-//                              ORIENTACION
-body
-    .banner-principal.orientacion
-        flex-direction: row-reverse
-    .banner-principal.orientacion2
-        flex-direction: row    
-//                              ALIENACION   
-body
-    .banner-principal
-        .contenido
-            h1.alineacion
-                text-align: center
-            h1.alineacion2
-                text-align: right
-            h1.alineacion3
-                text-align: left      
-            .major.alineacion
-                text-align: center
-            .major.alineacion2        
-                text-align: right
-            .major.alineacion3
-                text-align: left    
-            .parrafo2.alineacion
-                text-align: center
-            .parrafo2.alineacion2 
-                text-align: right  
-            .parrafo3.alineacion3
-                text-align: left      
-            .comenzar.alineacion
-                justify-content: center
-            .comenzar.alineacion2
-                justify-content: flex-end   
-            .comenzar.alineacion3
-                justify-content: flex-start       
-//                              POSICION IMAGEN
-body
-    .banner-principal
-        .img
-            img.posicion
-                object-position: left
-            img.posicion2
-                object-position: right
-            img.posicion3            
-                object-position: center
-//                                                                                                          SPOT1
-body
-    .spot1
-        display: inline-flex
-        height: 70vh
-        justify-content: space-between
-        flex-direction: row-reverse
-        box-shadow: inset 0 1px 0 0 #0000001e
-        transition: 0.5s ease-in-out
-        align-items: center
+                    justify-content: end
+                    padding: 21px 45px 0px 30px
+                    i
+                        font-size: large
+                        width: 36px
+            .mobile-menu
+                display: none
+                cursor: pointer
+                div
+                    width: 25px
+                    height: 3px
+                    color: #000
+                    margin: 5px
+                    background: #000
+                    transition: all 0.3s ease                    
 
-        .contenido1
-            width: 65%
-            padding: 4rem 4rem 5rem 5rem
-            align-items: center
-            overflow: hidden
-            transition:  0.5s ease-in-out
-            h2
-                font-size: 2.25rem
-                font-weight: 300
-                line-height: 1.375
-                letter-spacing: -0.05em
-                margin: 0 0 1rem 0
-            .parrafo1    
-                font-size: 16px
-                font-weight: 200
-                margin-bottom: 40px
-                .propiedades
-                    cursor: pointer
-                    a
-                        color: #000
-                        &:hover
-                            text-decoration: none
-                            color: #18c9c9
-                            transition: 0.3s    
-        .imag1
-            width: 35%
-            height: 70vh
-            object-fit: cover
-            display: flex
-            justify-content: center
-            align-items: center
-            img
-                width: 100%
-                height: 100%
-                object-fit: cover
-                transition: 0.9s ease-in-out
-        .comenzar
-            display: flex
-            justify-content: left
-            padding: 0
-            cursor: pointer
-            li
-                display: flex
-                overflow: auto
-                justify-content: center
-                a
-                    text-decoration: none
-                    height: auto
-                    width: auto
-                    color: #000    
-                    border-radius: 4em
-                    text-align: center
-                    padding: 0 3em
-                    text-transform: uppercase
-                    box-shadow: inset 0 0 0 0.5px #a3a3a3
-                    line-height: 4em
-                    font-size: 0.8rem
-                    font-weight: 400
-                    text-overflow: ellipsis
-                    letter-spacing: 0.125em
-                    &:hover
-                        color: #18c9c9
-                        box-shadow: inset 0 0 0 0.5px #18c9c9    
-//ESTILOS
-body
-    .spot1.estilo1
-        padding: 2rem 7rem 5rem 7rem
-        flex-direction: row-reverse
-        .contenido1.estilo1
-            width: 60%
-        .imag1.estilo1
-            width: 21rem
-            height: 21rem
-            margin: 50px
-            img
-                border-radius: 100%       
-body
-    .spot1.estilo2
-        justify-content: flex-end             
-        align-items: center
-        .contenido1.estilo2
-            z-index: 1
-            position: relative
-            background-color: #fff
-            border-radius: 10px
-            opacity: 0.8
-            height: 85%
-            padding: 7rem 4rem 5rem 5rem
-        .imag1.estilo2
-            position: absolute
-            width: 100%
-body
-    .spot1.estilo3
-        justify-content: center    
-//ESQUEMA
-body
-    .spot1.esquema
-        background-color: #000    
-        .contenido1.esquema
-            background-color: #000
-            h2
-                color: #fff
-            .parrafo1.esquema
-                color: #fff
-                .controles.esquema
-                    background-color: #fff
-                    color: #000    
-        .comenzar
-            li
-                a.esquema
-                    color: #fff            
-//COLORES
-body
-    .spot1.color1
-        background-color: #30363d
-        transition: 0.5s ease-in-out
-        .contenido.color1
-            background-color: #30363d
-            transition: 0.5s ease-in-out 
-    .spot1.color2
-            background-color: #db8992   
-            .contenido.color2
-                background-color: #db8992   
-    .spot1.color3    
-            background-color: #ab7aad
-            .contenido.color3    
-                background-color: #ab7aad
-    .spot1.color4    
-            background-color: #897cad
-            .contenido.color4    
-                background-color: #897cad   
-    .spot1.color5    
-            background-color: #7794ce
-            .contenido.color5    
-                background-color: #7794ce
-    .spot1.color6
-            background-color: #64abb4  
-            .contenido.color6
-                background-color: #64abb4     
-//ORIENTACION
-body
-    .spot1.orientacion
-        flex-direction: row
-    .spot1.orientacion2
-        flex-direction: row-reverse      
-//ALINEACION
-body
-    .spot1
-        .contenido1
-            h2.alineacion
-                text-align: center
-            h2.alineacion2
-                text-align: right
-            h2.alineacion3
-                text-align: left       
-            .parrafo1.alineacion
-                text-align: center
-            .parrafo1.alineacion2 
-                text-align: right  
-            .parrafo1.alineacion3
-                text-align: left      
-            .comenzar.alineacion
-                justify-content: center
-            .comenzar.alineacion2
-                justify-content: flex-end   
-            .comenzar.alineacion3
-                justify-content: flex-start         
-//POSICION
-body
-    .spot1
-        .imag1
-            img.culiado
-                width: 50%
-                
-//                                                                                                          SPOT2  
-body
-    .spot2
-        display: inline-flex
-        justify-content: space-between
-        box-shadow: inset 0 1px 0 0 #0000001e
-        align-items: center
-        height: 70vh
-        transition: 0.5s ease-in-out
-        .contenido2
-            width: 65%
-            padding: 4rem 4rem 5rem 5rem
-            align-items: center
-            overflow: hidden
-            transition: 0.5s ease-in-out
-            h2
-                font-size: 2.25rem
-                font-weight: 300
-                line-height: 1.375
-                letter-spacing: -0.05em
-                margin: 0 0 1rem 0
-            .parrafo2    
-                font-size: 16px
-                font-weight: 200
-                margin-bottom: 40px
-                .propiedades
-                    cursor: pointer
-                    a
-                        color: #000
-                        &:hover
-                            text-decoration: none
-                            color: #18c9c9
-                            transition: 0.3s    
-        .imag2
-            width: 35%
-            height: 70vh
-            object-fit: cover
-            display: flex
-            justify-content: center
-            align-items: center
-            img
-                width: 100%
-                height: 100%
-                object-fit: cover
-                transition: 0.9s ease-in-out
-        .comenzar2
-            display: flex
-            justify-content: left
-            padding: 0
-            cursor: pointer
-            li
-                display: flex
-                overflow: auto
-                justify-content: center
-                a
-                    text-decoration: none
-                    height: auto
-                    width: auto
-                    color: #000    
-                    border-radius: 4em
-                    text-align: center
-                    padding: 0 3em
-                    text-transform: uppercase
-                    box-shadow: inset 0 0 0 0.5px #a3a3a3
-                    line-height: 4em
-                    font-size: 0.8rem
-                    font-weight: 400
-                    text-overflow: ellipsis
-                    letter-spacing: 0.125em
-                    &:hover
-                        color: #18c9c9
-                        box-shadow: inset 0 0 0 0.5px #18c9c9
-//ESTILOS
-body
-    .spot2.estilo1
-        padding: 2rem 7rem 5rem 7rem
-        flex-direction: row-reverse
-        .contenido2.estilo1
-            width: 60%
-        .imag2.estilo1
-            width: 21rem
-            height: 21rem
-            margin: 50px
-            img
-                border-radius: 100%       
-body
-    .spot2.estilo2
-        justify-content: flex-end             
-        align-items: center
-        .contenido2.estilo2
-            z-index: 1
-            position: relative
-            background-color: #fff
-            border-radius: 10px
-            opacity: 0.8
-            height: 85%
-            padding: 7rem 4rem 5rem 4rem
-        .imag2.estilo2
-            position: absolute
-            width: 100%
-body
-    .spot2.estilo3
-        justify-content: center    
-//ESQUEMA
-body
-    .spot2.esquema
-        background-color: #000    
-        .contenido2.esquema
-            background-color: #000
-            h2
-                color: #fff
-            .parrafo2.esquema
-                color: #fff
-                .controles.esquema
-                    background-color: #fff
-                    color: #000    
-        .comenzar2
-            li
-                a.esquema
-                    color: #fff                  
-//COLORES
-body
-    .spot2.color1
-        background-color: #30363d
-        transition: 0.5s ease-in-out
-        .contenido.color1
-            background-color: #30363d
-            transition: 0.5s ease-in-out 
-    .spot2.color2
-            background-color: #db8992   
-            .contenido.color2
-                background-color: #db8992   
-    .spot2.color3    
-            background-color: #ab7aad
-            .contenido2.color3    
-                background-color: #ab7aad
-    .spot2.color4    
-            background-color: #897cad
-            .contenido.color4    
-                background-color: #897cad   
-    .spot2.color5    
-            background-color: #7794ce
-            .contenido.color5    
-                background-color: #7794ce
-    .spot2.color6
-            background-color: #64abb4  
-            .contenido.color6
-                background-color: #64abb4         
-//ALINEACION
-body
-    .spot2
-        .contenido2
-            h2.alineacion
-                text-align: center
-            h2.alineacion2
-                text-align: right
-            h2.alineacion3
-                text-align: left       
-            .parrafo2.alineacion
-                text-align: center
-            .parrafo2.alineacion2 
-                text-align: right  
-            .parrafo2.alineacion3
-                text-align: left      
-            .comenzar2.alineacion
-                justify-content: center
-            .comenzar2.alineacion2
-                justify-content: flex-end   
-            .comenzar2.alineacion3
-                justify-content: flex-start  
-//ORIENTACION                      
-body
-    .spot2.orientacion
-        flex-direction: row-reverse
-    .spot2.orientacion2
-        flex-direction: row   
-
-
-//                                                                                                          SPOT3
-body
-    .spot3
-        display: inline-flex
-        justify-content: space-between
-        flex-direction: row-reverse
-        box-shadow: inset 0 1px 0 0 #0000001e
-        align-items: center
-        height: 70vh
-        transition: 0.5s ease-in-out
-        .contenido3
-            width: 65%
-            padding: 4rem 4rem 5rem 5rem
-            align-items: center
-            overflow: hidden
-            transition: 0.5s ease-in-out
-            h2
-                font-size: 2.25rem
-                font-weight: 300
-                line-height: 1.375
-                letter-spacing: -0.05em
-                margin: 0 0 1rem 0
-            .parrafo3    
-                font-size: 16px
-                font-weight: 200
-                margin-bottom: 40px
-                .propiedades
-                    cursor: pointer
-                    a
-                        color: #000
-                        &:hover
-                            text-decoration: none
-                            color: #18c9c9
-                            transition: 0.3s    
-        .imag3
-            width: 35%
-            height: 70vh
-            object-fit: cover
-            display: flex
-            justify-content: center
-            align-items: center
-            img
-                width: 100%
-                height: 100%
-                object-fit: cover
-                transition: 0.9s ease-in-out
-        .comenzar3
-            display: flex
-            justify-content: left
-            padding: 0
-            cursor: pointer
-            li
-                display: flex
-                overflow: auto
-                justify-content: center
-                a
-                    text-decoration: none
-                    height: auto
-                    width: auto
-                    color: #000    
-                    border-radius: 4em
-                    text-align: center
-                    padding: 0 3em
-                    text-transform: uppercase
-                    box-shadow: inset 0 0 0 0.5px #a3a3a3
-                    line-height: 4em
-                    font-size: 0.8rem
-                    font-weight: 400
-                    text-overflow: ellipsis
-                    letter-spacing: 0.125em
-                    &:hover
-                        color: #18c9c9
-                        box-shadow: inset 0 0 0 0.5px #18c9c9
-//ESTILOS
-body
-    .spot3.estilo1
-        padding: 2rem 7rem 5rem 7rem
-        flex-direction: row-reverse
-        .contenido3.estilo1
-            width: 60%
-        .imag3.estilo1
-            width: 21rem
-            height: 21rem
-            margin: 50px
-            img
-                border-radius: 100%       
-body
-    .spot3.estilo2
-        justify-content: flex-end             
-        align-items: center
-        .contenido3.estilo2
-            z-index: 1
-            position: relative
-            background-color: #fff
-            border-radius: 10px
-            opacity: 0.8
-            height: 85%
-            padding: 7rem 4rem 5rem 4rem
-        .imag3.estilo2
-            position: absolute
-            width: 100%
-body
-    .spot3.estilo3
-        justify-content: center                             
-//ESQUEMA
-.spot3.esquema
-        background-color: #000    
-        .contenido3.esquema
-            background-color: #000
-            h2
-                color: #fff
-            .parrafo3.esquema
-                color: #fff
-                .controles.esquema
-                    background-color: #fff
-                    color: #000    
-        .comenzar3
-            li
-                a.esquema
-                    color: #fff          
-//COLORES
-body
-    .spot3.color1
-        background-color: #30363d
-        transition: 0.5s ease-in-out
-        .contenido2.color1
-            background-color: #30363d
-            transition: 0.5s ease-in-out 
-    .spot3.color2
-            background-color: #db8992   
-            .contenido1.color2
-                background-color: #db8992   
-    .spot3.color3    
-            background-color: #ab7aad
-            .contenido1.color3    
-                background-color: #ab7aad
-    .spot3.color4    
-            background-color: #897cad
-            .contenido1.color4    
-                background-color: #897cad   
-    .spot3.color5    
-            background-color: #7794ce
-            .contenido1.color5    
-                background-color: #7794ce
-    .spot3.color6
-            background-color: #64abb4  
-            .contenido1.color6
-                background-color: #64abb4         
-//ORIENTACION
-body
-    .spot3.orientacion
-        flex-direction: row
-    .spot3.orientacion2
-        flex-direction: row-reverse     
-//ALINEACION
-body
-    .spot3
-        .contenido3
-            h2.alineacion
-                text-align: center
-            h2.alineacion2
-                text-align: right
-            h2.alineacion3
-                text-align: left       
-            .parrafo3.alineacion
-                text-align: center
-            .parrafo3.alineacion2 
-                text-align: right  
-            .parrafo3.alineacion3
-                text-align: left      
-            .comenzar3.alineacion
-                justify-content: center
-            .comenzar3.alineacion2
-                justify-content: flex-end   
-            .comenzar3.alineacion3
-                justify-content: flex-start
-
-
-//---------------------------------------------MEDIA SCREEN---------------------------------------------------------//    
-
-@media screen and ( max-width: 1000px )
+@media screen and ( max-width: 700px)
     body
-        .banner-principal
-            .contenido
-                //padding: 3em//
-                h1
-                    font-size: 40px
-                .major
-                    font-size: 17px    
-                .parrafo2
-                    font-size: 13px
-@media screen and ( max-width: 570px)
-    body
-        .banner-principal
-            flex-direction: column-reverse
-            text-align: center
-            height: auto
-            .contenido
-                width: 100%
-                padding: 1em 1em 1em 1em
-                .comenzar
-                    justify-content: center
-                    li
-                        a
-                            font-size: 0.8rem
-                            padding: 1px 9em
-                            line-height: 3em   
-            .img
-                width: 100%
-                height: auto
-                height: 40vh
-        .spot1
-            flex-direction: column-reverse
-            text-align: center
-            height: auto
-            .contenido1
-                width: 100%
-                padding: 1em 1em 1em 1em
-                .comenzar
-                    justify-content: center
-                    li
-                        a
-                            font-size: 0.8rem
-                            padding: 1px 9em
-                            line-height: 3em   
-            .imag1
-                width: 100%
-                height: auto
-                height: 40vh
-        .spot2
-            flex-direction: column-reverse
-            text-align: center
-            height: auto
-            .contenido2
-                width: 100%
-                padding: 1em 1em 1em 1em
-                .comenzar2
-                    justify-content: center
-                    li
-                        a
-                            font-size: 0.8rem
-                            padding: 1px 9em
-                            line-height: 3em   
-            .imag2
-                width: 100%
-                height: auto
-                height: 40vh
-        .spot3
-            flex-direction: column-reverse
-            text-align: center
-            height: auto
-            .contenido3
-                width: 100%
-                padding: 1em 1em 1em 1em
-                .comenzar3
-                    justify-content: center
-                    li
-                        a
-                            font-size: 0.8rem
-                            padding: 1px 9em
-                            line-height: 3em   
-            .imag3
-                width: 100%
-                height: auto
-                height: 40vh        
+        .header
+            .nav-var
+                .mob-header.active
+                    transform: translateX(0vh)
+                    transition: all 0.8s ease 
+                .mob-header
+                    background-color: #fff
+                    position: fixed
+                    top: 0
+                    right: 0
+                    width: 60%
+                    height: 80vh
+                    transform: translateX(300%)    
+                    transition: all 0.8s ease
+                    .nav-list
+                        flex-direction: column
+                        transform: translateX(300%)
+                        transition: transform 0.3s ease-in-out
+                        padding: 45px 30px 30px 30px
+                        li
+                            opacity: 0
+                            transition: 0.5s ease-in-out  
+                            height: 50px  
+                            display: flex
+                            align-items: center
+                            a
+                                font-size: 27px
+                    .nav-list.active
+                        transform: translateX(0vh)
+                        transition: 0.5s ease-in-out    
+                .mobile-menu
+                    display: block
+                    position: fixed
+                    top: 20px
+                    right: 10px
+                .logo
+                    padding-top: inherit
+                    z-index: 1
+@keyframes navLinkFade 
+    from
+        opacity: 0
+        transform: translateX(50px)
+    to
+        opacity: 1
+        transform: translateX(0)
+.toggle .line1
+    transform: rotate(-45deg) translate(-5px,6px)        
+.toggle .line2
+    opacity: 0        
+.toggle .line3
+    transform: rotate(45deg) translate(-5px,-6px)                
+                    
 
-    body
-        .spot3
-            .contenido3.estiloxxx
-                background-color: #000                    
-            
-
-                                 
+        
+         
 
 
 
-
-
-
-                        
-                  
-
-                            
+                    
