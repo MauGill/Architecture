@@ -2,9 +2,11 @@ const navSlide = () => {
     const burger = document.querySelector('.mobile-menu');
     const nav = document.querySelector ('.nav-list');
     const navLinks = document.querySelectorAll('.nav-list li')
+    const mobheader = document.querySelector('.mob-header')
 
     burger.addEventListener('click', () => {
         nav.classList.toggle('active');
+        mobheader.classList.toggle('active');
 
         navLinks.forEach((link, index) => {
             if (link.style.animation) {
