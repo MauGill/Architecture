@@ -1,4 +1,4 @@
-
+//HEADER
 body
     margin: 0
     padding: 0
@@ -20,6 +20,7 @@ body
             align-items: center
             position: fixed
             margin: 40px 20px 20px 20px
+            z-index: 1
             .logo
                 width: 90px
                 margin: 10px
@@ -54,10 +55,7 @@ body
                     transition: width .3s
                 li:hover::after
                     width: 100%
-                    transition: width .3s            
-body
-    .header
-        .nav-var
+                    transition: width .3s      
             .mob-header
                 display: flex
                 .social-widgets
@@ -65,9 +63,11 @@ body
                     justify-content: end
                     padding: 21px 45px 0px 30px
                     visibility: hidden
-                    i
+                    a
                         font-size: large
                         width: 35px
+                        text-decoration: none
+                        color: #000
             .mobile-menu
                 display: none
                 cursor: pointer
@@ -77,8 +77,29 @@ body
                     color: #000
                     margin: 5px
                     background: #000
-                    transition: all 0.3s ease                    
+                    transition: all 0.3s ease
+        .cont1
+            width: 85%
+            height: 50%    
+            position: fixed
+            top: 30vh  
+            .writ
+                h2
+                    font-weight: 400
+                    font-size: x-large 
+                    color: #fff
+                    .typed
+                        .weare
+                            font-weight: 400
+                            color: #fff
+                            background-color: #584b4b57
+                            font-style: normal
+                            font-size: larger
 
+
+
+
+//HEADER                     
 @media screen and ( max-width: 700px)
     body
         .header
@@ -116,11 +137,13 @@ body
                         transition: 0.5s ease-in-out    
                     .social-widgets
                         visibility: inherit    
+                        a
+                            cursor: pointer
                 .mobile-menu
                     display: block
                     position: fixed
-                    top: 20px
-                    right: 10px
+                    top: 60px
+                    right: 30px
                 .logo
                     padding-top: inherit
                     z-index: 1

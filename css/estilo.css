@@ -18,7 +18,8 @@ body {
       justify-content: space-between;
       align-items: center;
       position: fixed;
-      margin: 40px 20px 20px 20px; }
+      margin: 40px 20px 20px 20px;
+      z-index: 1; }
       body .header .nav-var .logo {
         width: 90px;
         margin: 10px;
@@ -54,27 +55,43 @@ body {
         body .header .nav-var .nav-list li:hover::after {
           width: 100%;
           transition: width 0.3s; }
-
-body .header .nav-var .mob-header {
-  display: flex; }
-  body .header .nav-var .mob-header .social-widgets {
-    display: flex;
-    justify-content: end;
-    padding: 21px 45px 0px 30px;
-    visibility: hidden; }
-    body .header .nav-var .mob-header .social-widgets i {
-      font-size: large;
-      width: 35px; }
-body .header .nav-var .mobile-menu {
-  display: none;
-  cursor: pointer; }
-  body .header .nav-var .mobile-menu div {
-    width: 25px;
-    height: 3px;
-    color: #000;
-    margin: 5px;
-    background: #000;
-    transition: all 0.3s ease; }
+      body .header .nav-var .mob-header {
+        display: flex; }
+        body .header .nav-var .mob-header .social-widgets {
+          display: flex;
+          justify-content: end;
+          padding: 21px 45px 0px 30px;
+          visibility: hidden; }
+          body .header .nav-var .mob-header .social-widgets a {
+            font-size: large;
+            width: 35px;
+            text-decoration: none;
+            color: #000; }
+      body .header .nav-var .mobile-menu {
+        display: none;
+        cursor: pointer; }
+        body .header .nav-var .mobile-menu div {
+          width: 25px;
+          height: 3px;
+          color: #000;
+          margin: 5px;
+          background: #000;
+          transition: all 0.3s ease; }
+    body .header .cont1 {
+      width: 85%;
+      height: 50%;
+      position: fixed;
+      top: 30vh; }
+      body .header .cont1 .writ h2 {
+        font-weight: 400;
+        font-size: x-large;
+        color: #fff; }
+        body .header .cont1 .writ h2 .typed .weare {
+          font-weight: 400;
+          color: #fff;
+          background-color: #584b4b57;
+          font-style: normal;
+          font-size: larger; }
 
 @media screen and (max-width: 700px) {
   body .header .nav-var .mob-header.active {
@@ -110,11 +127,13 @@ body .header .nav-var .mobile-menu {
       transition: 0.5s ease-in-out; }
     body .header .nav-var .mob-header .social-widgets {
       visibility: inherit; }
+      body .header .nav-var .mob-header .social-widgets a {
+        cursor: pointer; }
   body .header .nav-var .mobile-menu {
     display: block;
     position: fixed;
-    top: 20px;
-    right: 10px; }
+    top: 60px;
+    right: 30px; }
   body .header .nav-var .logo {
     padding-top: inherit;
     z-index: 1; } }
