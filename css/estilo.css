@@ -40,7 +40,7 @@ body {
         margin-left: 10vh; }
         body .header .nav-var .nav-list li {
           font-size: x-large;
-          box-shadow: 0 1px 0 0 #0000001e;
+          box-shadow: 0px 2px 0 -1px #0000001e;
           margin-left: 10vh; }
         body .header .nav-var .nav-list a {
           color: #000;
@@ -82,16 +82,26 @@ body {
       height: 50%;
       position: fixed;
       top: 30vh; }
-      body .header .cont1 .writ h2 {
-        font-weight: 400;
-        font-size: x-large;
-        color: #fff; }
-        body .header .cont1 .writ h2 .typed .weare {
+      body .header .cont1 .writ {
+        margin-bottom: 50px; }
+        body .header .cont1 .writ h2 {
           font-weight: 400;
+          font-size: x-large;
+          color: #fff; }
+          body .header .cont1 .writ h2 .typed .weare {
+            font-weight: 400;
+            color: #fff;
+            background-color: #584b4b57;
+            font-style: normal;
+            font-size: larger; }
+      body .header .cont1 .budget {
+        box-shadow: 0px 0px 0px 0.6px #fff;
+        padding: 5px;
+        width: max-content; }
+        body .header .cont1 .budget a {
+          text-decoration: none;
           color: #fff;
-          background-color: #584b4b57;
-          font-style: normal;
-          font-size: larger; }
+          font-size: unset; }
 
 @media screen and (max-width: 700px) {
   body .header .nav-var .mob-header.active {
