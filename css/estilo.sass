@@ -81,10 +81,10 @@ body
         .cont1
             width: 85%
             height: 50%    
-            position: fixed
+            position: sticky
             top: 30vh  
             .writ
-                margin-bottom: 50px
+                margin-bottom: 90px
                 h2
                     font-weight: 400
                     font-size: x-large 
@@ -100,16 +100,19 @@ body
                 box-shadow: 0px 0px 0px 0.6px #fff
                 padding: 5px
                 width: max-content
+                transition: all 0.3s ease
                 a
                     text-decoration: none
                     color: #fff
                     font-size: unset
-
-
-
-
-
-//HEADER                     
+                    transition: all 0.3s ease
+                a.active
+                    color: #fff  
+                    transition: all 0.3s ease  
+            .budget.active
+                background-color: #584b4b57
+                padding: 8px    
+                transition: all 0.3s ease    
 @media screen and ( max-width: 700px)
     body
         .header
@@ -169,7 +172,63 @@ body
 .toggle .line2
     opacity: 0        
 .toggle .line3
-    transform: rotate(45deg) translate(-5px,-6px)                
+    transform: rotate(45deg) translate(-5px,-6px)                   
+//WHOWEARE            
+body    
+    .whoware
+        display: flex
+        height: 80vh
+        margin-top: 30%
+        justify-content: space-between
+        flex-direction: column
+        z-index: 2
+        text-align: right
+        .who
+            width: 85%
+            height: inherit
+            overflow: hidden
+            padding: 10px
+            background-color: #fff
+            z-index: 0
+            box-shadow: 0px 0px 10px 5px #a6a4a0
+
+            p
+                font-size: larger
+        .img1
+            background: url(../img/img1.jpg)
+            background-size: cover     
+            width: 90%
+            height: 90vh
+            position: relative
+            top: -10%
+            z-index: 2
+            margin: 10px 10px 10px 31px
+        .img2
+            background: url(../img/img2.jpg)
+            background-size: cover     
+            visibility: hidden
+        .line1
+            top: 99%
+            right: 0
+            display: flex
+            position: absolute
+            z-index: -1
+            width: 60%
+            height: 100vh
+            background: #dbd7d6
+            box-shadow: -3px 0px 20px 0px #a6a4a0
+
+
+
+@media screen and ( max-width: 700px)                
+    
+
+
+
+
+
+               
+             
                     
 
         

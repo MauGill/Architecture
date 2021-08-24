@@ -1,3 +1,4 @@
+//                                                                                                                          BURGER
 const navSlide = () => {
     const burger = document.querySelector('.mobile-menu');
     const nav = document.querySelector ('.nav-list');
@@ -19,7 +20,7 @@ const navSlide = () => {
     });    
 }
 navSlide();
-
+//                                                                                                                          TYPING EFECT
 const typed = new Typed ('.typed', {
     strings: [
     ' <i class="weare" > projects </i> ',
@@ -39,3 +40,20 @@ const typed = new Typed ('.typed', {
     cursorChar: '|',
     contentType: 'html',
 });
+//                                                                                                                          BUDGET EFFECT
+const budget = () => {
+    const bud = document.querySelector('.budget');
+    const buda = document.querySelector('.budget a')
+                
+
+    buda.addEventListener('mouseover', () => {
+        bud.classList.toggle('active')
+        buda.classList.toggle('active')
+
+    })
+    buda.addEventListener('mouseout', () => {
+        bud.classList.remove('active')
+        buda.classList.remove('active')
+    } )
+}
+budget();
