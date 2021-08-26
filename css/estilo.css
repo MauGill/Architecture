@@ -293,7 +293,7 @@ body .whoware {
     body .whoware .line2 {
       position: absolute;
       width: 100%;
-      height: 30vh;
+      height: 45vh;
       top: 170%;
       background-color: #36707f;
       z-index: -1; } }
