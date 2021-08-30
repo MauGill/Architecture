@@ -112,6 +112,6 @@ const navVar = document.querySelector(".nav-var")
 window.addEventListener("scroll", shownav);
 function shownav () {
 
-        navVar.classList.toggle("sticky", window.scrollY > 0)
+        navVar.classList.toggle("sticky", window.scrollY > 350)
 
 }

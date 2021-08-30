@@ -58,7 +58,7 @@ body {
         body .header .nav-var .mob-header .social-widgets {
           display: flex;
           justify-content: end;
-          padding: 21px 45px 0px 30px;
+          padding: 21px 45px 30px 30px;
           visibility: hidden; }
           body .header .nav-var .mob-header .social-widgets a {
             font-size: large;
@@ -149,7 +149,9 @@ body {
         transform: translateX(0vh);
         transition: 0.5s ease-in-out; }
       body .header .nav-var .mob-header .social-widgets {
-        visibility: inherit; }
+        visibility: inherit;
+        position: absolute;
+        bottom: 0; }
         body .header .nav-var .mob-header .social-widgets a {
           cursor: pointer; }
     body .header .nav-var .mobile-menu {
@@ -211,21 +213,6 @@ body .whoware {
       box-shadow: 0px 15px 0px -12px #c1bebc;
       font-size: xx-large;
       font-weight: 400; }
-  body .whoware .img2 {
-    background: url(../img/img2.jpg);
-    background-size: cover;
-    right: 5%;
-    position: absolute;
-    width: 25%;
-    height: 60vh;
-    display: flex;
-    justify-content: center; }
-    body .whoware .img2 p {
-      position: absolute;
-      bottom: -10vh;
-      box-shadow: 0px 15px 0px -9px #c1bebc;
-      font-size: unset;
-      font-weight: 400; }
   body .whoware .line1 {
     position: absolute;
     z-index: -1;
@@ -247,21 +234,20 @@ body .whoware {
 @media screen and (max-width: 700px) {
   body .whoware {
     display: flex;
-    height: 80vh;
+    height: 70vh;
     margin-top: 10%;
     justify-content: space-between;
     flex-direction: column;
     z-index: 2;
     text-align: right;
-    padding: 0%; }
+    padding: 0%;
+    background-color: #dbd7d6; }
     body .whoware .who {
       width: 85%;
-      height: 75vh;
+      height: max-content;
       padding: 10px;
       background-color: #fff;
       z-index: 0;
-      box-shadow: 0px 0px 10px 5px #a6a4a0;
-      opacity: 0.7;
       bottom: inherit;
       left: inherit;
       position: inherit; }
@@ -270,23 +256,14 @@ body .whoware {
     body .whoware .img1 {
       background: url(../img/img1.jpg);
       background-size: cover;
-      width: 90%;
+      width: 100%;
       height: 35vh;
       position: absolute;
-      bottom: -100vh;
+      bottom: -70vh;
       display: flex;
       justify-content: center;
-      left: -5%; }
-      body .whoware .img1 p {
-        position: absolute;
-        bottom: -15vh;
-        box-shadow: 0px 15px 0px -12px #c1bebc;
-        font-size: x-large;
-        font-weight: 400; }
-    body .whoware .img2 {
-      background: url(../img/img2.jpg);
-      background-size: cover;
-      visibility: hidden; }
+      left: inherit;
+      margin: inherit; }
     body .whoware .line1 {
       top: 99%;
       right: 0;
@@ -294,16 +271,16 @@ body .whoware {
       position: absolute;
       z-index: -1;
       width: 47%;
-      height: 100vh;
+      height: 10vh;
       background: #dbd7d6;
       box-shadow: -5px 0px 5px 0px #a6a4a0; }
     body .whoware .line2 {
       position: absolute;
       width: 100%;
-      height: 60vh;
-      top: 170%;
-      background-color: #36707f;
-      z-index: -1; } }
+      height: 35vh;
+      top: 143%;
+      background-color: #206dbe;
+      z-index: 0; } }
 body .top-btn {
   display: none;
   position: fixed;
@@ -350,5 +327,17 @@ body .top-btn:focus {
   to {
     opacity: 0;
     transform: translate3d(0, 100%, 0); } }
+body .services {
+  height: 100vh;
+  text-align: center;
+  margin-top: 10%; }
+  body .services h2 {
+    font-size: xx-large;
+    font-weight: 500;
+    color: #676767; }
+  body .services h4 {
+    font-weight: 400;
+    font-size: x-large;
+    margin-bottom: -25px; }
 
 /*# sourceMappingURL=estilo.css.map */
