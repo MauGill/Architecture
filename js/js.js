@@ -23,10 +23,10 @@ navSlide();
 //                                                                                                                          TYPING EFECT
 const typed = new Typed ('.typed', {
     strings: [
-    ' <i class="weare" > projects </i> ',
-    ' <i class="weare" > buildings </i> ',
-    ' <i class="weare" > surveys </i> ',
-    ' <i class="weare" > remodeling </i> '],
+    ' <i class="weare" > proyectos </i> ',
+    ' <i class="weare" > construcciones </i> ',
+    ' <i class="weare" > relevamientos </i> ',
+    ' <i class="weare" > remodelaciones </i> '],
     //stringsElement: '#cadenas-texto',
     typeSpeed: 75,
     startDelay: 300,
@@ -106,4 +106,12 @@ function backToTop() {
           t -= 2;
           return c/2*(t*t*t + 2) + b;
       };
+//                                                                                                                          NAV BAR CHANGE COLOR
+const navVar = document.querySelector(".nav-var")
 
+window.addEventListener("scroll", shownav);
+function shownav () {
+
+        navVar.classList.toggle("sticky", window.scrollY > 0)
+
+}
