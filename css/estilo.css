@@ -54,7 +54,8 @@ body {
           width: 100%;
           transition: width 0.3s; }
       body .header .nav-var .mob-header {
-        display: flex; }
+        display: flex;
+        align-items: center; }
         body .header .nav-var .mob-header .social-widgets {
           display: flex;
           justify-content: end;
@@ -220,7 +221,15 @@ body .whoware {
     height: 112vh;
     background-color: #dcd7d3;
     right: 0;
-    bottom: -110%; }
+    bottom: -110%;
+    text-align: end;
+    padding-right: 10vh; }
+    body .whoware .line1 h3 {
+      margin-top: 30vh;
+      font-weight: 300; }
+    body .whoware .line1 h4 {
+      font-weight: 400;
+      margin-top: -5vh; }
   body .whoware .line2 {
     z-index: -1;
     bottom: -120%;
@@ -234,7 +243,7 @@ body .whoware {
 @media screen and (max-width: 700px) {
   body .whoware {
     display: flex;
-    height: 70vh;
+    height: max-content;
     margin-top: 10%;
     justify-content: space-between;
     flex-direction: column;
@@ -258,29 +267,38 @@ body .whoware {
       background-size: cover;
       width: 100%;
       height: 35vh;
-      position: absolute;
-      bottom: -70vh;
-      display: flex;
-      justify-content: center;
+      position: inherit;
+      bottom: inherit;
+      justify-content: inherit;
       left: inherit;
-      margin: inherit; }
+      margin: inherit;
+      z-index: 0;
+      margin: -16px 0px 0px 0px; }
     body .whoware .line1 {
-      top: 99%;
+      top: 100%;
       right: 0;
-      display: flex;
       position: absolute;
-      z-index: -1;
-      width: 47%;
-      height: 10vh;
-      background: #dbd7d6;
-      box-shadow: -5px 0px 5px 0px #a6a4a0; }
-    body .whoware .line2 {
-      position: absolute;
+      z-index: 0;
       width: 100%;
-      height: 35vh;
+      height: 0vh;
+      background: #dbd7d6;
+      box-shadow: -5px 0px 5px 0px #a6a4a0;
+      text-align: center;
+      padding-right: inherit; }
+      body .whoware .line1 h3 {
+        margin-top: 1vh; }
+      body .whoware .line1 h4 {
+        position: absolute;
+        writing-mode: tb;
+        height: max-content;
+        right: -1vh; }
+    body .whoware .line2 {
+      width: 100%;
+      height: 5vh;
       top: 143%;
-      background-color: #206dbe;
-      z-index: 0; } }
+      background-color: #dbd7d6;
+      z-index: 0;
+      position: inherit; } }
 body .top-btn {
   display: none;
   position: fixed;

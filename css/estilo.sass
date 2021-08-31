@@ -56,6 +56,7 @@ body
                     transition: width .3s      
             .mob-header
                 display: flex
+                align-items: center
                 .social-widgets
                     display: flex
                     justify-content: end
@@ -227,6 +228,14 @@ body
             background-color: #dcd7d3
             right: 0
             bottom: -110%
+            text-align: end
+            padding-right: 10vh
+            h3
+                margin-top: 30vh
+                font-weight: 300
+            h4
+                font-weight: 400  
+                margin-top: -5vh  
         .line2
             z-index: -1
             bottom: -120%
@@ -241,7 +250,7 @@ body
     body    
         .whoware
             display: flex
-            height: 70vh
+            height: max-content
             margin-top: 10%
             justify-content: space-between
             flex-direction: column
@@ -265,29 +274,41 @@ body
                 background-size: cover     
                 width: 100%
                 height: 35vh
-                position: absolute
-                bottom: -70vh
-                display: flex
-                justify-content: center
+                position: inherit
+                bottom: inherit
+                justify-content: inherit
                 left: inherit
                 margin: inherit
+                z-index: 0
+                margin: -16px 0px 0px 0px
             .line1
-                top: 99%
+                top: 100%
                 right: 0
-                display: flex
                 position: absolute
-                z-index: -1
-                width: 47%
-                height: 10vh
+                z-index: 0
+                width: 100%
+                height: 0vh
                 background: #dbd7d6
                 box-shadow: -5px 0px 5px 0px #a6a4a0
+                text-align: center
+                padding-right: inherit
+                h3
+                    margin-top: 1vh
+                h4
+                    position: absolute
+                    writing-mode: tb
+                    height: max-content
+                    right: -1vh 
+                
+
+
             .line2
-                position: absolute
                 width: 100%
-                height: 35vh
+                height: 5vh
                 top: 143%
-                background-color: #206dbe
+                background-color: #dbd7d6
                 z-index: 0
+                position: inherit
 
 //                                                                                                                                BTN-TOP
 body
