@@ -185,7 +185,7 @@ body
 body
     .header
         .nav-var.sticky
-            background-color: #fff
+            background-color: #fffdfdcf
 
 //                                                                                                                             WHOWEARE            
 body
@@ -203,6 +203,9 @@ body
             left: 5%
             position: absolute
             bottom: -60%
+            p
+                letter-spacing: 2px
+                text-transform: uppercase
         .img1
             background: url(../img/img1.jpg)
             background-size: cover     
@@ -232,23 +235,28 @@ body
             align-items: center
             text-align: right
             display: flex
-            padding-left: 20%
+            padding-left: 10%
             p1
                 font-weight: 300
             p2
                 font-weight: 400  
         .line2
             z-index: -1
-            bottom: -120%
+            bottom: -112%
             position: absolute
             width: 100%
-            height: 45vh
+            height: 50vh
             background-color: #dcd7d3
             z-index: -1
             left: 0
+            p1
+                visibility: hidden
+            p2
+                visibility: hidden    
 
 @media screen and ( max-width: 700px)   
     body    
+        background-color: #dbd7d6
         .whoware
             display: flex
             height: max-content
@@ -270,6 +278,7 @@ body
                 position: inherit
                 p
                     font-size: larger
+                    letter-spacing: 1px
             .img1
                 background: url(../img/img1.jpg)
                 background-size: cover     
@@ -300,13 +309,13 @@ body
                     margin-top: 10px
                     text-align: center
                     width: 100%
+                    visibility: hidden
                 p2
                     writing-mode: tb
                     height: max-content
                     margin-top: -26px
-                    width: 97%                
-
-
+                    width: 97%          
+                    visibility: hidden      
             .line2
                 width: 100%
                 height: 5vh
@@ -314,6 +323,13 @@ body
                 background-color: #dbd7d6
                 z-index: 0
                 position: inherit
+                margin-top: 10px
+                p1
+                    visibility: inherit
+                p2
+                    visibility: inherit     
+                    font-size: larger
+                    font-weight: 600
 
 //                                                                                                                                BTN-TOP
 body
@@ -366,20 +382,49 @@ body
 //                                                                                                                              SERVICES      
 body
     .services
-        height: 100vh   
+        padding: 5%
+        height: max-content
         text-align: center
-        margin-top: 10%
+        background-color: #6ba1b16b
         h2
-            font-size: xx-large
+            font-size: x-large
             font-weight: 500
-            color: #676767
+            color: #162c34
         h4
             font-weight: 400
             font-size: x-large
-            margin-bottom: -25px
+            margin-bottom: -20px
+        .boxes
+            display: flex
+            justify-content: space-around
+            flex-direction: column
+            .fas
+                font-size: xxx-large
+            h2
+                font-size: larger
+                font-weight: 400
+                color: #162c34  
+            .row   
+                display: flex
+                margin: 5%   
+            .box
+                margin: 20px
+                width: 33%       
    
 
-           
+@media screen and ( max-width: 700px)
+    body
+        .services
+            .boxes
+                display: inherit    
+                .box
+                    margin-top: 10%
+                    width: fit-content
+                .row
+                    align-items: center
+                    flex-direction: column    
+
+
 
 
     

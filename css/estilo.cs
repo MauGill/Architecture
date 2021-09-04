@@ -236,10 +236,10 @@ body .whoware {
       font-weight: 400; }
   body .whoware .line2 {
     z-index: -1;
-    bottom: -112%;
+    bottom: -120%;
     position: absolute;
     width: 100%;
-    height: 50vh;
+    height: 45vh;
     background-color: #dcd7d3;
     z-index: -1;
     left: 0; }
@@ -271,8 +271,7 @@ body .whoware {
         left: inherit;
         position: inherit; }
         body .whoware .who p {
-          font-size: larger;
-          letter-spacing: 1px; }
+          font-size: larger; }
       body .whoware .img1 {
         background: url(../img/img1.jpg);
         background-size: cover;
@@ -371,43 +370,16 @@ body .top-btn:focus {
     opacity: 0;
     transform: translate3d(0, 100%, 0); } }
 body .services {
-  padding: 5%;
-  height: max-content;
+  height: 100vh;
   text-align: center;
-  background-color: #6ba1b16b; }
+  margin-top: 10%; }
   body .services h2 {
-    font-size: x-large;
+    font-size: xx-large;
     font-weight: 500;
-    color: #162c34; }
+    color: #676767; }
   body .services h4 {
     font-weight: 400;
     font-size: x-large;
-    margin-bottom: -20px; }
-  body .services .boxes {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column; }
-    body .services .boxes .fas {
-      font-size: xxx-large; }
-    body .services .boxes h2 {
-      font-size: larger;
-      font-weight: 400;
-      color: #162c34; }
-    body .services .boxes .row {
-      display: flex;
-      margin: 5%; }
-    body .services .boxes .box {
-      margin: 20px;
-      width: 33%; }
+    margin-bottom: -25px; }
 
-@media screen and (max-width: 700px) {
-  body .services .boxes {
-    display: inherit; }
-    body .services .boxes .box {
-      margin-top: 10%;
-      width: fit-content; }
-    body .services .boxes .row {
-      align-items: center;
-      flex-direction: column; } }
-
-/*# sourceMappingURL=estilo.css.map */
+/*# sourceMappingURL=estilo.cs.map */
