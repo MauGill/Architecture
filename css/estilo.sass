@@ -3,6 +3,7 @@ body
     margin: 0
     padding: 0
     font-family: 'Raleway', sans-serif
+    background-color: #dbd7d6
     .header
         background: url(../img/Header.jpg)
         background-size: cover
@@ -432,6 +433,7 @@ body
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr))
         min-height: 100vh
         grid-gap: 1rem
+        padding: 5%
         .img-container
             overflow: hidden
             img
@@ -458,6 +460,14 @@ body
                 left: 50%
                 transform: translate(-50%, -5%)
                 bottom: 0%
+            .fas
+                position: absolute
+                right: 0
+                font-size: xx-large
+                margin: 25px
+                color: white
+                top: 55px
+                cursor: pointer
             .full-img
                 position: absolute
                 height: 70%
@@ -469,10 +479,15 @@ body
                 transform: translate(-50%, -50% ) scale(1) 
         .modal.open
             opacity: 1
-            pointer-events: all     
+            pointer-events: all    
+
 @media screen and ( max-width: 700px)    
     body
         .gallery
+            display: inherit
+            padding: 2%
+            .img-container
+                margin-top: 10px
             .modal
                 p
                     width: 100%
@@ -480,6 +495,114 @@ body
                     text-align: center       
                 .full-img.open
                     transform: translate(-50%, -50%) scale(0.5)
+                .fas
+                    top: 70px
+
+//                                                                                                                              ABOUT US
+body
+    .about    
+        height: 145vh
+        text-align: center   
+        padding: 1% 5% 5% 5%
+        overflow: hidden
+        h2
+            font-size: x-large
+            font-weight: 500
+            color: #162c34
+        h4
+            font-weight: 400
+            font-size: x-large
+            margin-bottom: -20px   
+        .infpic
+            text-align: initial
+            font-size: x-large    
+            letter-spacing: 2px
+            margin-top: 50px
+            margin-bottom: 50px
+            display: flex
+            img
+                object-fit: cover
+                width: 50%
+                height: 50%
+        // DARLE EFECTO DE COLOCACION , QUE SE MUEVA DE IZQ HACIA EL MEDIO
+        .pics
+            display: flex
+            justify-content: space-between
+            .mom
+                width: 30%
+                img
+                    object-fit: cover
+                    width: 100%
+                    height: 50vh
+                    cursor: pointer
+                .description
+                    height: 240px
+                    background-color: #dadadaa6
+                    transform: translateY(-108%)
+                    opacity: 0
+                    transition: all 0.9s ease
+                .description.hover
+                    opacity: 1
+                    transition: all 0.9s ease
+            .mom2
+                width: 30%
+                img
+                    object-fit: cover
+                    width: 100%
+                    height: 50vh
+                    cursor: pointer
+                .description2
+                    height: 240px
+                    background-color: #dadadaa6
+                    transform: translateY(-108%)
+                    opacity: 0
+                    transition: all 0.9s ease
+                .description2.hover
+                    opacity: 1
+                    transition: all 0.9s ease    
+            .mom3
+                width: 30%
+                img
+                    object-fit: cover
+                    width: 100%
+                    height: 50vh
+                    cursor: pointer        
+                .description3
+                        height: 240px
+                        background-color: #dadadaa6
+                        transform: translateY(-108%)
+                        opacity: 0
+                        transition: all 0.9s ease
+                .description3.hover
+                    opacity: 1
+                    transition: all 0.9s ease
+@media screen and ( max-width: 700px)       
+    body
+        .about
+            height: 150vh
+            .infpic
+                flex-direction: column-reverse
+                p
+                    text-align: center
+                img
+                    width: 100%
+            .pics
+                .mom
+                    img
+                        height: 41vh        
+                .mom2
+                    img
+                        height: 41vh        
+                .mom3
+                    img
+                        height: 41vh        
+
+
+
+                
+ 
+
+
 
 
 

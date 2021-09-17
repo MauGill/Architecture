@@ -120,23 +120,66 @@ const modal = document.querySelector(".modal");
 const previews = document.querySelectorAll(".gallery img")
 const original = document.querySelector(".full-img")
 const caption = document.querySelector(".caption");
+const quit = document.querySelector(".fa-times")
+
+quit.addEventListener("click", (e) => {
+    modal.classList.remove("open");
+    original.classList.remove("open");
+} )
 
 previews.forEach(preview =>  {
     preview.addEventListener('click', () => {
         modal.classList.add("open");
         original.classList.add("open");
+
         const originalSrc = preview.getAttribute("data-original");
         original.src= `./img/${originalSrc}`;
+
         const altText = preview.alt
         caption.textContent = altText;
     } )
 });
+
+//FALTA CAMBIAR QUE AL HACER CLICK EN LA IMAGEN NO SUCEDA NADA, QUE NO SE CIERRE, Y VER LA MANERA DE QUE LAS FOTOS YA ESTEN CARGADAS 
+
 modal.addEventListener("click", (e) => {
     if (e.target.classList.contains("modal")) {
         modal.classList.remove("open");
         original.classList.remove("open");
     }
 } )
+//                                                                                                                      ABOUT US
+const mom = document.querySelector(".mom")
+const mom2 = document.querySelector(".mom2")
+const mom3 = document.querySelector(".mom3")
+const descrip = document.querySelector(".description")
+const descrip2 = document.querySelector(".description2")
+const descrip3 = document.querySelector(".description3")
+
+mom.addEventListener('mouseover', () => {
+    descrip.classList.add('hover')
+} )
+
+mom.addEventListener('mouseout', () => {
+    descrip.classList.remove('hover')
+} )
+
+mom2.addEventListener('mouseover', () => {
+    descrip2.classList.add('hover')
+} )
+
+mom2.addEventListener('mouseout', () => {
+    descrip2.classList.remove('hover')
+} )
+mom3.addEventListener('mouseover', () => {
+    descrip3.classList.add('hover')
+} )
+
+mom3.addEventListener('mouseout', () => {
+    descrip3.classList.remove('hover')
+} )
+
+
 
 
 
