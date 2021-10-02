@@ -577,7 +577,7 @@ body .about {
 body .contact {
   display: flex;
   flex-direction: row;
-  height: 90vh;
+  height: 100vh;
   padding: 1% 5% 5% 5%; }
   body .contact .mapa {
     height: 100%;
@@ -591,14 +591,14 @@ body .contact {
     body .contact .info h2 {
       color: #fff;
       padding: 20px;
-      font-size: xx-large;
+      font-size: x-large;
       font-weight: 300; }
     body .contact .info .ubi {
       display: flex;
       align-items: center;
       padding: 35px; }
       body .contact .info .ubi h3 {
-        font-size: 25px;
+        font-size: x-large;
         color: white;
         font-weight: 400; }
       body .contact .info .ubi .icon {
@@ -612,7 +612,7 @@ body .contact {
       align-items: center;
       padding: 35px; }
       body .contact .info .cel h3 {
-        font-size: 25px;
+        font-size: x-large;
         color: white;
         font-weight: 400; }
       body .contact .info .cel .icon {
@@ -626,7 +626,7 @@ body .contact {
       align-items: center;
       padding: 35px; }
       body .contact .info .correo h3 {
-        font-size: 25px;
+        font-size: x-large;
         color: white;
         font-weight: 400; }
       body .contact .info .correo .icon {
