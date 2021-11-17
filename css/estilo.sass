@@ -1,4 +1,9 @@
 //                                                                                                                              HEADER
+html
+    scroll-behavior: smooth
+section[id]
+    scroll-margin-top: 100px
+
 body
     margin: 0
     padding: 0
@@ -207,7 +212,6 @@ body
             bottom: -60%
             p
                 letter-spacing: 2px
-                text-transform: uppercase
         .img1
             background: url(../img/img1.jpg)
             background-size: cover     
@@ -412,7 +416,7 @@ body
             .box
                 margin: 20px
                 width: 33%   
-                &:hover
+                
                         
 @media screen and ( max-width: 700px)
     body
@@ -612,6 +616,8 @@ body
         flex-direction: row
         height: 100vh
         padding: 1% 5% 5% 5%
+        p
+            display: none
         .mapa
             height: 100%   
             width: 50%
@@ -721,16 +727,13 @@ body
                     display: inline
                     color: #162c34
 
-              
-
-
 //                                                                                                                 FOOTER
 body
     .footer
-        height: 100px
+        height: 7vh
         background-color: #9d9b9ba8
         display: flex
-        padding-left: 50px
+        padding-left: 5vh
         h3
             font-size: x-large
             font-weight: 400
