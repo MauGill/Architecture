@@ -35,87 +35,52 @@ menuLinks.forEach(menuLink => {
         
     })
 } )
-//                                                                                                                         gallery
-let galleryImages = document.querySelectorAll(".gallery-img");
-let getLatestOpenedImg;
-let windowWidth = window.innerWidth;
+//                                                                                                                          BACK T TOP BTN
+const topBtn = document.querySelector(".top-btn");
 
-if(galleryImages) {
-    galleryImages.forEach(function(image, index) {
-        image.onclick = function () {
-            let getElementCss = window.getComputedStyle(image);
-            let getFullImgUrl = getElementCss.getPropertyValue("background-image");
-            let getImgUrlPos = getFullImgUrl.split("/img/thumbs/");
-            let setNewImgUrl = getImgUrlPos[1].replace('")', '');
+window.addEventListener("scroll", scrollFunction);
 
-            let getLatestOpenedImg = index + 1;
-            let container = document.body;
-            let newImgWindow = document.createElement("div");
-            container.appendChild(newImgWindow);
-            newImgWindow.setAttribute("class", "img-window")
-            newImgWindow.setAttribute("onclick","closeImg()");
+function scrollFunction ( ) {
+    if (window.pageYOffset > 300) { //Show btn
 
-            let newImg = document.createElement("img");
-            newImgWindow.appendChild(newImg);
-            newImg.setAttribute("src", "img/" + setNewImgUrl);
-            newImg.setAttribute("id", "current-img");
+        if(!topBtn.classList.contains("btnEntrance")) {
+            topBtn.classList.remove("btnExit");
+            topBtn.classList.add("btnEntrance");
+            topBtn.style.display = "block";
+          }
+        
+    } else { // Hide btn
 
-
-            newImg.onload = function() {
-
-                let imgWidth = this.width;
-                let calcImgToEdge = ((windowWidth - imgWidth) / 2) - 80;
-
-                let newPrevBtn = document.createElement("a");
-                let btnPrevText = document.createTextNode("prev");
-                newPrevBtn.appendChild(btnPrevText);
-                container.appendChild(newPrevBtn);
-                newPrevBtn.setAttribute("class", "img-btn-prev");
-                newPrevBtn.setAttribute("onclick", "changeImg(0)");
-                newPrevBtn.style.cssText = "left: " + calcImgToEdge + "px;"
-
-    
-                let newNextBtn = document.createElement("a");
-                let btnNextText = document.createTextNode("next");
-                newNextBtn.appendChild(btnNextText);
-                container.appendChild(newNextBtn);
-                newNextBtn.setAttribute("class", "img-btn-next");
-                newNextBtn.setAttribute("onclick", "changeImg(1)");
-                newNextBtn.style.cssText = "right: " + calcImgToEdge + "px;"
-
-            }
+        if(topBtn.classList.contains("btnEntrance")) {
+            topBtn.classList.remove("btnEntrance");
+            topBtn.classList.add("btnExit");
+            setTimeout(function() {
+              topBtn.style.display = "none";
+            }, 250);
+          }
         }
-    });
-}
-//ACA ESTA LA SOLUCION PARA EL JS ANTERIOR , EN EL CUAL TUVE QUE HACER UN BOTON PARA CERRAR LA IMAGEN( GALERIA),
-// YA QUE SI HACIA CLICK EN LA IMAGEN SE CERRABA PERO QUEDABA OSCURO
+      }
+topBtn.addEventListener("click", backToTop);
 
-function closeImg() {
-    document.querySelector(".img-window").remove();
-    document.querySelector(".img-btn-next").remove();
-    document.querySelector(".img-btn-prev").remove();
-}
-function changeImg(changeDir) {
-    document.querySelector("#current-img").remove();
-
-    let getImgWindow = document.querySelector(".img-window");
-    let newImg = document.createElement("img");
-    getImgWindow.appendChild(newImg);
-
-    let calcNewImg;
-    if(changeDir === 1) {
-        calcNewImg = getLatestOpenedImg + 1;
-        if(calcNewImg > galleryImages.length) {
-            calcNewImg = 1;
+function backToTop() {
+        const targetPosition = 0;
+        const startPosition = window.pageYOffset;
+        const distance = targetPosition - startPosition;
+        const duration = 750;
+        let start = null;
+        
+        window.requestAnimationFrame(step);
+      
+        function step(timestamp) {
+          if (!start) start = timestamp;
+          const progress = timestamp - start;
+          window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
+          if (progress < duration) window.requestAnimationFrame(step);
         }
-    } else if(changeDir === 0) {
-        calcNewImg = getLatestOpenedImg - 1;
-        if(calcNewImg < 1) {
-            calcNewImg = galleryImages.length;
-        }
-    }
-    newImg.setAttribute("src", `img/img${calcNewImg}.jpg`);
-    newImg.setAttribute("id", "current-img");
-
-    getLatestOpenedImg = calcNewImg;
-}
+      }    
+      function easeInOutCubic(t, b, c, d) {
+          t /= d/2;
+          if (t < 1) return c/2*t*t*t + b;
+          t -= 2;
+          return c/2*(t*t*t + 2) + b;
+      };
