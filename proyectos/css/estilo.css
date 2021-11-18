@@ -236,4 +236,7 @@ body .top-btn:hover {
 body .top-btn:focus {
   color: #fff; }
 
+body .header .nav-var.sticky {
+  background-color: #fffdfdcf; }
+
 /*# sourceMappingURL=estilo.css.map */

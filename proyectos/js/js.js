@@ -84,3 +84,11 @@ function backToTop() {
           t -= 2;
           return c/2*(t*t*t + 2) + b;
       };
+//                                                                                                             STICKY NAV-BAR
+const navVar = document.querySelector(".nav-var")
+
+window.addEventListener("scroll", shownav);
+function shownav () {
+        navVar.classList.toggle("sticky", window.scrollY > 350)
+
+}
